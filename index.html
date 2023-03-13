@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body
+        {
+            background-image: url("https://www.pcclean.io/wp-content/uploads/2020/4/YNrM7b.jpg");
+            margin-left: 40%;
+            margin-bottom: 3%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .Calc
+        {
+            height: 40px;
+            width: 60px;
+            background-color: #142452;
+            font-size: 20px;
+            font-family: Times, 'Times New Roman', serif;
+            color: white;
+            transition: all 0.2s ease-in;
+            margin-left: 30px;
+            border-radius: 10px;
+        }
+
+        .Calc:hover
+        {
+            background-color: #111;
+            color: white;
+            transition: all 0.2s ease-in;
+        }
+
+        .expression
+        {
+            height: 40px;
+            width: 240px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 24px;
+            border-radius: 10px;
+            background-color: #FFF;
+        }
+
+        .AC
+        {
+            height: 40px;
+            width: 60px;
+            background-color: #d1b215;
+            font-size: 20px;
+            font-family: Times, 'Times New Roman', serif;
+            color: white;
+            transition: all 0.2s ease-in;
+            border-radius: 10px;
+        }
+
+        .AC:hover
+        {
+            background-color: #d1b335;
+            color: #000;
+            transition: all 0.2s ease-in;
+        }
+
+        .borders
+        {
+            background-color: #4729E1;
+            width: 400px;
+            height: 550px;
+            border-radius: 10px;
+            align-self: center;
+            text-align: center;
+        }
+
+        h1
+        {
+            color: white;
+            font-size: 60px;
+            border-radius: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        function evaluate_func()
+        {
+            let x = document.getElementById("expr");
+            x.value = eval(x.value);
+        }
+    </script>
+
+</head>
+<body>
+        <section class="borders">
+        <h1>Simple Calculator</h1>
+            <input type="text" style="margin-left: 30px;" class = "expression" id="expr">
+            <button class="AC" style="margin-left:32px;" onclick="document.getElementById('expr').value = '';">AC</button>
+            <br>
+            <br>
+
+            <button value="1" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '1'">1</button>
+            <button value="2" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '2'">2</button>
+            <button value="3" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '3'">3</button>
+            <button value="/" class="Calc AC" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '/'">/</button>
+            <br>
+            <br>
+
+            <button value="4" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '4'">4</button>
+            <button value="5" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '5'">5</button>
+            <button value="6" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '6'">6</button>
+            <button value="*" class="Calc AC" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '*'">*</button>
+            <br>
+            <br>
+
+            <button value="7" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '7'">7</button>
+            <button value="8" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '8'">8</button>
+            <button value="9" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '9'">9</button>
+            <button value="+" class="Calc AC" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '+'">+</button>
+            <br>
+            <br>
+
+            <button value="." class="Calc AC" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '.'">.</button>
+            <button value="0" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '0'">0</button>
+            <button value="-" class="Calc AC" onclick="document.getElementById('expr').value = document.getElementById('expr').value + '-'">-</button>
+            <button value="=" class="Calc AC" onclick="evaluate_func()">=</button>
+            <br>
+            <br>
+
+            <button value="1" class="Calc" onclick="document.getElementById('expr').value = document.getElementById('expr').value.substring(0,document.getElementById('expr').value.length - 1)">DEL</button>
+
+        </section>
+</body>
+</html>
