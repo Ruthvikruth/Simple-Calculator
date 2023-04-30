@@ -1,0 +1,78 @@
+body
+{
+    background-color: grey;
+    margin-left: 40%;
+    margin-bottom: 3%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Calc
+{
+    height: 40px;
+    width: 60px;
+    background-color: #111;
+    font-size: 20px;
+    font-family: Times, 'Times New Roman', serif;
+    color: white;
+    transition: all 0.2s ease-in;
+    margin-left: 30px;
+    border-radius: 10px;
+    border-color: #EEE;
+}
+
+.Calc:hover
+{
+    background-color: white;
+    color: #121;
+    transition: all 0.2s ease-in;
+}
+
+.expression
+{
+    height: 40px;
+    width: 240px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: #FFF;
+}
+
+.AC
+{
+    height: 40px;
+    border-color: white;
+    width: 60px;
+    background-color: blue;
+    font-size: 20px;
+    font-family: Times, 'Times New Roman', serif;
+    color: white;
+    transition: all 0.2s ease-in;
+    border-radius: 10px;
+}
+
+.AC:hover
+{
+    background-color: #d1b335;
+    color: #000;
+    transition: all 0.2s ease-in;
+}
+
+.borders
+{
+    background-color: #111;
+    width: 400px;
+    height: 550px;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+}
+
+h1
+{
+    color: white;
+    font-size: 60px;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
